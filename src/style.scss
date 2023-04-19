@@ -13,6 +13,15 @@ $transparent: rgb(255, 255, 255, 0.3);
     }
 }
 
+@media only screen and (max-width: 1400px) {
+    .sidebar {
+      display: none;
+    }
+    .menu {
+        display: none;
+    }
+  }
+
 
 @mixin tablet {
     @media screen and (max-width:768px) {
@@ -28,7 +37,7 @@ $transparent: rgb(255, 255, 255, 0.3);
 }
 
 .formContainer {
-    background-color: $secondary-color;
+    background-color: $primary-color;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -104,17 +113,17 @@ $transparent: rgb(255, 255, 255, 0.3);
 }
 
 .home {
-    background-color: $tetriary-color;
+    background: linear-gradient(to bottom, #8bd4dd9f, #b397e451);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .container {
-        border: 1px solid white;
+        
         border-radius: 10px;
         width: 65%;
-        height: 80%;
+        height: 85%;
         display: flex;
         overflow: hidden;
         @include tablet {
@@ -123,29 +132,43 @@ $transparent: rgb(255, 255, 255, 0.3);
 
         .sidebar{
             flex: 1;
-            background-color: $secondary-color;
+            background-color: $primary-color;
             position: relative;
-            max-width: 500px;
+            max-width: 400px;
 
             .navbar {
+                margin: 2px;
+                padding: 15px;
                 display: flex;
                 align-items: center;
-                background-color: $primary-color;
+                margin-top: 15px;
+                border-radius: 10px;
                 height: 50px;
-                padding: 10px;
+                
                 justify-content: space-between;
                 color: white;
 
                 .logo {
                     font-weight: bold;
+                    
                     @include laptop {
                         display: none;
+                    }
+
+                    img {
+                        width: 70%;
                     }
                 }
 
                 .user {
+                    
+                    position: absolute;
+                    bottom: 0;
                     display: flex;
-                    gap: 10px;
+                    gap: 12px;
+                    
+                    border-radius: 5px;
+                    padding: 15px;
                     align-items: center;
                     @include laptop {
                         display: flex;
@@ -164,8 +187,7 @@ $transparent: rgb(255, 255, 255, 0.3);
                     button {
                         border-radius: 5px;
                         padding: 14px;
-                        color: white;
-                        background-color: $secondary-color;
+                        
                         font-size: 16px;
                         border: none;
                         cursor: pointer;
@@ -181,8 +203,15 @@ $transparent: rgb(255, 255, 255, 0.3);
 
                
         }
+
+       
+
         .search {
             border-bottom: 1px solid gray;
+            margin: 10px;
+            background-color: #bfbcbc78;
+            
+            border-radius: 20px;
 
             .searchForm {
                 padding: 10px;
@@ -194,7 +223,8 @@ $transparent: rgb(255, 255, 255, 0.3);
                     outline: none;
 
                     &::placeholder {
-                        color: lightgray;
+                        color: rgb(255, 253, 253);
+                        
                     }
                 }
             }
@@ -210,7 +240,7 @@ $transparent: rgb(255, 255, 255, 0.3);
             cursor: pointer;
 
             &:hover {
-                background-color: $primary-color;
+                background-color: $secondary-color;
             }
             img {
                 width: 50px;
@@ -234,18 +264,44 @@ $transparent: rgb(255, 255, 255, 0.3);
 
         .chat{
             
+            
+            
             flex: 2;
 
             .chatInfo {
                 height: 50px;
-                background-color: $secondary-color;
+                background-color: $primary-color;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
                 color: lightgray;
-                border-radius: 0px 0px 25px 25px;
+                
+                img {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    float: left;
+                }
+                
+                .chatInfo-user img {
+                    width: 50px;
+                    height: 50px;
+                    
+                }
+
+                .chatInfo-user span {
+                    font-size: 33px;
+                    padding-left: 5px;
+                    
+                }
+                
             }
+
+
+            
+
+            
 
             .chatIcons {
                 display: flex;
@@ -259,9 +315,10 @@ $transparent: rgb(255, 255, 255, 0.3);
 
             .messages {
                     background: linear-gradient(to bottom, #fff4f4, #8297c7);
-                padding: 10px;
+                padding: 5px;
                 height: calc(100% - 160px);
                 overflow: scroll;
+                
                 .message {
                     display: flex;
                     gap: 20px;
@@ -317,7 +374,7 @@ $transparent: rgb(255, 255, 255, 0.3);
             }
 
             .input {
-                height: 50px;
+                height: 60px;
                 background-color: #110D66;
                 padding: 10px;
                 display: flex;
@@ -341,21 +398,39 @@ $transparent: rgb(255, 255, 255, 0.3);
                 .send {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
+                    gap: 1px;
+                    
 
                     img {
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                         height: 24px;
                         cursor: pointer;
+                        background-color: $primary-color;
+                        border-radius: 50px;
+                        padding: 10px 15px;
+                        transition: .1s;
                     }
 
                     button {
                         border: none;
                         padding: 10px 15px;
                         color: white;
-                        background-color: #5B2A98;
+                        background-color: transparent;
                         border-radius: 5px;
                         cursor: pointer;
+
+                        img:active {
+                            scale: 1.1;
+                            background-color: $secondary-color;
+                        }
+
+                        file:active {
+                            scale: 1.1;
+                            background-color: $secondary-color;
+                        }
                     }
+
+
                 }
             }
 

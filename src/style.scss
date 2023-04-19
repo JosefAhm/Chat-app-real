@@ -7,6 +7,8 @@ $accent: #FFA500;
 $color1: linear-gradient(to bottom right, #FFA500, #FF5F1F);
 $transparent: rgb(255, 255, 255, 0.3);
 
+
+
 @mixin mobile {
     @media screen and (max-width:480px) {
         @content;
@@ -160,52 +162,75 @@ $transparent: rgb(255, 255, 255, 0.3);
                     }
                 }
 
-                .user {
-                    
-                    position: absolute;
-                    bottom: 0;
-                    display: flex;
-                    gap: 12px;
-                    
-                    border-radius: 5px;
-                    padding: 15px;
-                    align-items: center;
-                    @include laptop {
-                        display: flex;
-                        
-                    }
-
-                    img {
-                        background-color: white;
-                        height: 24px;
-                        width: 24px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                        
-                    }
-
-                    button {
-                        border-radius: 5px;
-                        padding: 14px;
-                        
-                        font-size: 16px;
-                        border: none;
-                        cursor: pointer;
-                        
-                        @include tablet {
-                            position: absolute;
-                            bottom: 10px;
-                            
-                            background-color: $primary-color;
-                        }
-                    }
-                }
-
+                
                
         }
+        .profile{
+            position: relative; /* Set position property */
+            height: 200px; /* Specify a height */
+            background-color: #724AC8;
+          }
 
-       
+          .profile {
+            position: absolute; /* Set position property */
+            bottom: 0; /* Stick to bottom */
+            left: 0; /* Align to left */
+            right: 0; /* Align to right */
+            margin: 12px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            height: 50px;
+           
+            .user {
+                display: flex;
+                gap: 12px;
+                z-index: 200;
+               justify-content: space-between;
+                border-radius: 5px;
+                padding: 15px;
+                align-items: center;
+                @include laptop {
+                    display: flex;
+                    
+                }
 
+                span {
+                    color: white;
+                    font-size: 24px;
+                }
+
+                img {
+                    background-color: white;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    
+                }
+
+                button {
+                    border-radius: 5px;
+                    padding: 14px;
+                    
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                    
+                    @include tablet {
+                        position: absolute;
+                        bottom: 10px;
+                        
+                        background-color: $primary-color;
+                    }
+
+                    
+                }
+                
+            }
+
+        }
         .search {
             border-bottom: 1px solid gray;
             margin: 10px;
@@ -270,7 +295,7 @@ $transparent: rgb(255, 255, 255, 0.3);
 
             .chatInfo {
                 height: 50px;
-                background-color: $primary-color;
+                background-color: #110D66;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;

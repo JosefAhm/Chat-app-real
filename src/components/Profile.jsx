@@ -9,14 +9,16 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar">
+    <div className="profile">
       
       <div className="user">
         
         <img src={currentUser.photoURL} alt="" />
         <span>{currentUser.displayName}</span>
         
-        <button onClick={()=>signOut(auth)}>Logout</button>
+        <div className="logout" style={{marginRight: "auto"}}>
+          <button onClick={()=>signOut(auth)}>Logout</button>
+        </div>
       </div>
     </div>
   )

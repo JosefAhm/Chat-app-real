@@ -7,6 +7,8 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.20.0",
+    "fuse": "^0.4.0",
+    "fuse.js": "^6.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-firebase-hooks": "^5.1.1",

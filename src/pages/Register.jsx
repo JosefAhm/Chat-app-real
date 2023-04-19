@@ -53,8 +53,14 @@ uploadTask.on(
 
 }catch(err){
   console.log(err);
-  setErr(true)
+  if (err.code === 'auth/invalid-email') {
+    setErr('Invalid email');
+  } else {
+    setErr(err.message || 'Something went wrong');
+  }
 }
+
+
   };
   return (
     <div className="formContainer">
@@ -71,7 +77,7 @@ uploadTask.on(
                     <span>Add an avatar</span>
                 </label>
                 <button>Sign Up</button>
-                {err && <span>Something went wrong</span>}
+                {err && <span>{err}</span>}
             </form>
             <p>Already Signed Up? <Link to="/Login">Login</Link></p>
         </div>

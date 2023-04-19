@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, storage, db } from "../firebase";
+import logo from "../img/img/logo.png"
 
 const Login = () => {
 
@@ -34,7 +35,7 @@ const Login = () => {
     return (
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">ChatNow</span>
+                <span className="logo"><img src={logo} alt="" /></span>
                 <span className="title">Login</span>
                 <form onSubmit={handleSubmit}>
                     <input type="email" placeholder="Your Email" />

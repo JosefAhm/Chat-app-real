@@ -53,23 +53,8 @@ uploadTask.on(
 
 }catch(err){
   console.log(err);
-  if (err.code === 'auth/invalid-email') {
-    setErr('Invalid email');
-  } 
-  if (err.code === 'auth/email-already-in-use') {
-    setErr('Email already in use');
-  } 
-  if (err.code === 'auth/missing-email') {
-    setErr('Please fill out all fields');
-  } 
-  if (err.code === 'auth/weak-password') {
-    setErr(' Password should be at least 6 characters');
-  } 
-
-  
+  setErr(true)
 }
-
-
   };
   return (
     <div className="formContainer">
@@ -86,7 +71,7 @@ uploadTask.on(
                     <span>Add an avatar</span>
                 </label>
                 <button>Sign Up</button>
-                {err && <span>{err}</span>}
+                {err && <span>Something went wrong</span>}
             </form>
             <p>Already Signed Up? <Link to="/Login">Login</Link></p>
         </div>

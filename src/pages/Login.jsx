@@ -24,6 +24,9 @@ const Login = () => {
             if (error.code === 'auth/too-many-requests') {
               setErrorMessage('Too many requests. Please try again later.');
             } 
+            if (error.code === 'auth/user-not-found') {
+              setErrorMessage('User not found');
+            } 
 
         }
     };

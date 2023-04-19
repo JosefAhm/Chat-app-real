@@ -55,9 +55,18 @@ uploadTask.on(
   console.log(err);
   if (err.code === 'auth/invalid-email') {
     setErr('Invalid email');
-  } else {
-    setErr(err.message || 'Something went wrong');
-  }
+  } 
+  if (err.code === 'auth/email-already-in-use') {
+    setErr('Email already in use');
+  } 
+  if (err.code === 'auth/missing-email') {
+    setErr('Please fill out all fields');
+  } 
+  if (err.code === 'auth/weak-password') {
+    setErr(' Password should be at least 6 characters');
+  } 
+
+  
 }
 
 

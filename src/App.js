@@ -13,6 +13,8 @@ import { AuthContext } from "./context/AuthContext"
 
 function App() {
 
+  document.body.classList.add('no-scroll');
+
   const {currentUser} = useContext(AuthContext)
 
   const ProtectedRoute = ({children}) => {

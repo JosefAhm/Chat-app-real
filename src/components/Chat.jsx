@@ -30,9 +30,9 @@ const Chat = () => {
           <img src={More} alt="Button" onClick={toggleSidebar} />
         </div>
       </div>
-      <div className={`sidebar ${isSidebarHidden ? "sidebar-hidden" : ""}`}>
-  {/* your sidebar content */}
-</div>
+      <div className={`sidebar ${isSidebarHidden ? 'sidebar-hidden' : ''}`}>
+        {/* your sidebar content */}
+      </div>
 
       <Messages />
       <Input />

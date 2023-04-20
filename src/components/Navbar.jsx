@@ -4,6 +4,7 @@ import { auth } from "../firebase"
 import { AuthContext } from '../context/AuthContext'
 import logo from "../img/img/logo.png"
 
+
 const Navbar = () => {
   const {currentUser} = useContext(AuthContext)
 
@@ -11,7 +12,6 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <span className="logo"><img src={logo} alt="" /></span>
-      
     </div>
   )
 }

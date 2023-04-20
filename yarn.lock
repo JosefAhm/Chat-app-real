@@ -7745,7 +7745,7 @@ react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-router-dom@^6.8.2:
+react-router-dom@^6.10.0:
   version "6.10.0"
   resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.10.0.tgz"
   integrity sha512-E5dfxRPuXKJqzwSe/qGcqdwa18QiWC6f3H3cWXM24qj4N0/beCIf/CWTipop2xm7mR0RCS99NnaqPNjHtrAzCg==
@@ -8080,6 +8080,17 @@ sanitize.css@*:
   resolved "https://registry.npmjs.org/sanitize.css/-/sanitize.css-13.0.0.tgz"
   integrity sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==
 
+sass-loader@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-10.0.5.tgz"
+  integrity sha512-2LqoNPtKkZq/XbXNQ4C64GFEleSEHKv6NPSI+bMC/l+jpEXGJhiRYkAQToO24MR7NU4JRY2RpLpJ/gjo2Uf13w==
+  dependencies:
+    klona "^2.0.4"
+    loader-utils "^2.0.0"
+    neo-async "^2.6.2"
+    schema-utils "^3.0.0"
+    semver "^7.3.2"
+
 sass-loader@^12.3.0:
   version "12.6.0"
   resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-12.6.0.tgz"
@@ -8088,7 +8099,7 @@ sass-loader@^12.3.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.3.0, sass@^1.58.3:
+sass@^1.3.0, sass@^1.62.0:
   version "1.62.0"
   resolved "https://registry.npmjs.org/sass/-/sass-1.62.0.tgz"
   integrity sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==
@@ -9183,7 +9194,7 @@ webpack-sources@^3.2.3:
   resolved "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-"webpack@^4.0.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.4.0 || ^5.9.0", "webpack@^4.44.2 || ^5.47.0", webpack@^5.0.0, webpack@^5.1.0, webpack@^5.20.0, webpack@^5.64.4, "webpack@>= 4", webpack@>=2, "webpack@>=4.43.0 <6.0.0":
+"webpack@^4.0.0 || ^5.0.0", "webpack@^4.36.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.4.0 || ^5.9.0", "webpack@^4.44.2 || ^5.47.0", webpack@^5.0.0, webpack@^5.1.0, webpack@^5.20.0, webpack@^5.64.4, "webpack@>= 4", webpack@>=2, "webpack@>=4.43.0 <6.0.0":
   version "5.79.0"
   resolved "https://registry.npmjs.org/webpack/-/webpack-5.79.0.tgz"
   integrity sha512-3mN4rR2Xq+INd6NnYuL9RC9GAmc1ROPKJoHhrZ4pAjdMFEkJJWrsPw8o2JjCIyQyTu7rTXYn4VG6OpyB3CobZg==
